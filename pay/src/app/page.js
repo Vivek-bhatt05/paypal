@@ -31,12 +31,15 @@ export default function Home() {
     return actions.order.capture().then(function(details){
       const {payer} = details
       setSuccess(true)
+      console.log(payer)
     })
   }
 
   const onError = (data,actions) =>{
     setErrror("Error occured")
   }
+
+  console.log(orderId)
 
   return (
     <main>
